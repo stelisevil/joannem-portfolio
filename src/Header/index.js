@@ -1,7 +1,12 @@
 const Header = () => (
-  <div className="w-full">
-    <div className="flex justify-center text-6xl my-12">Joanne McGarvie</div>
-    <hr />
+  <div className="flex w-full justify-between mt-12">
+    <div className="m-1">JOANNE MCGARVIE</div>
+    <div className="flex">
+      <div className="m-1 mx-3">HOME</div>
+      <a className="m-1 mx-3">MY WORK</a>
+      <a className="m-1 mx-3">CV</a>
+      <a className="m-1 mx-3">LINKEDIN</a>
+    </div>
   </div>
 );
 
