@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: "brown";
+  src: local("brown"), url(./fonts/brown-regular-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "brownBold";
+  src: local("brownBold"), url(./fonts/brown-bold-webfont.woff) format("woff");
+}
+
 @tailwind utilities;

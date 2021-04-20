@@ -1,7 +1,7 @@
 const Intro = () => (
   <div className="text-left w-full md:w-2/3 mb-12">
-    <div className="mt-12 text-3xl">Hi, I’m Joanne.</div>
-    <div className="my-4 text-3xl">
+    <div className="mt-12 mb-2 text-4xl font-bold">Hi, I’m Joanne.</div>
+    <div className="mb-7 text-4xl font-bold">
       I’m a digital designer who loves to create new ideas.
     </div>
     <div className="my-2">
