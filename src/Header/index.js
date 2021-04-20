@@ -20,9 +20,9 @@ const Header = () => {
         </button>
         {burgerMenuOpen && (
           <div className="flex flex-col text-center items-center border boder-red-400 fixed w-full left-0 top-24 bg-white">
-            <div className="my-4">HOME</div>
+            <div className="my-5">HOME</div>
             <button
-              className="flex items-center my-4 cursor-pointer relative"
+              className="flex items-center my-5 cursor-pointer relative"
               onClick={() => {
                 setMyWorkMenu(!myWorkMenuOpen);
               }}
@@ -45,12 +45,12 @@ const Header = () => {
                 </ul>
               </div>
             )}
-            <a href={cv} className="my-4" target="_blank" rel="noreferrer">
+            <a href={cv} className="my-5" target="_blank" rel="noreferrer">
               CV
             </a>
             <a
               href="https://uk.linkedin.com/in/joanne-mcgarvie"
-              className="my-4"
+              className="my-5"
             >
               LINKEDIN
             </a>
