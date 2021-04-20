@@ -1,5 +1,6 @@
 import { useState } from "react";
 import chevron from "./images/ArrowDown.png";
+import cv from "./images/cv.pdf";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +36,9 @@ const Header = () => {
             </div>
           )}
         </div>
-        <div className="mx-3">CV</div>
+        <a href={cv} className="mx-3" target="_blank" rel="noreferrer">
+          CV
+        </a>
         <a href="https://uk.linkedin.com/in/joanne-mcgarvie" className="ml-3">
           LINKEDIN
         </a>
