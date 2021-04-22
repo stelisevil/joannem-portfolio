@@ -8,7 +8,7 @@ const Header = () => {
   const [burgerMenuOpen, setBurgerMenu] = useState(false);
 
   return (
-    <div className="flex w-full justify-between mt-12">
+    <div className="flex w-full justify-between pt-12 pb-4 px-2 sticky top-0 bg-white">
       <div>JOANNE MCGARVIE</div>
       <div className="md:hidden flex cursor-pointer">
         <button
@@ -19,7 +19,7 @@ const Header = () => {
           <img src={burger} alt="burger menu" className="w-8" />
         </button>
         {burgerMenuOpen && (
-          <div className="flex flex-col text-center items-center border boder-red-400 fixed w-full left-0 top-24 bg-white">
+          <div className="flex flex-col text-center items-center border boder-red-400 absolute w-full left-0 top-20 bg-white">
             <div className="my-5">HOME</div>
             <button
               className="flex items-center my-5 cursor-pointer relative"

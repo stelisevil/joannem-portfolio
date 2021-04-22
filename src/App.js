@@ -5,12 +5,14 @@ import Footer from "./Footer";
 
 const App = () => {
   return (
-    <div className="w-full flex flex-col p-2">
+    <>
       <Header />
-      <Intro />
-      <RecentWork />
+      <div className="w-full flex flex-col p-2">
+        <Intro />
+        <RecentWork />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
