@@ -1,16 +1,15 @@
+import { useState } from "react";
 import Header from "./Header";
-import Intro from "./Intro";
-import RecentWork from "./RecentWork";
+import MainContent from "./MainContent";
 import Footer from "./Footer";
 
 const App = () => {
+  const [content, setContent] = useState("home");
+
   return (
     <>
-      <Header />
-      <div className="w-full flex flex-col p-2">
-        <Intro />
-        <RecentWork />
-      </div>
+      <Header setContent={setContent} />
+      <MainContent content={content} />
       <Footer />
     </>
   );

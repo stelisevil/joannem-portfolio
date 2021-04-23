@@ -1,9 +1,10 @@
 import { useState } from "react";
+import TabList from "./TabList";
 import chevron from "./images/ArrowDown.png";
 import burger from "./images/BurgerMenu.png";
 import cv from "./images/cv.pdf";
 
-const Header = () => {
+const Header = ({ setContent }) => {
   const [myWorkMenuOpen, setMyWorkMenu] = useState(false);
   const [burgerMenuOpen, setBurgerMenu] = useState(false);
 
@@ -36,13 +37,7 @@ const Header = () => {
             </button>
             {myWorkMenuOpen && (
               <div className="w-32 top-8 -left-5 text-sm text-center">
-                <ul className="cursor-default">
-                  <li className="m-2">UX and UI</li>
-                  <li className="m-2">Campaigns</li>
-                  <li className="m-2">Graphic design</li>
-                  <li className="m-2">Social and Video</li>
-                  <li className="m-2">Art Direction</li>
-                </ul>
+                <TabList setContent={setContent} />
               </div>
             )}
             <a href={cv} className="my-5" target="_blank" rel="noreferrer">
@@ -58,7 +53,14 @@ const Header = () => {
         )}
       </div>
       <div className="md:flex hidden">
-        <div className="mx-3">HOME</div>
+        <div
+          className="mx-3 cursor-pointer"
+          onClick={() => {
+            setContent("home");
+          }}
+        >
+          HOME
+        </div>
         <button
           className="flex items-center mx-3 cursor-pointer relative"
           onClick={() => {
@@ -72,14 +74,8 @@ const Header = () => {
             alt="open work dropdown menu"
           />
           {myWorkMenuOpen && (
-            <div className="absolute w-32 top-8 -left-5 border border-gray-200 text-sm text-center">
-              <ul className="cursor-default">
-                <li className="m-2">UX and UI</li>
-                <li className="m-2">Campaigns</li>
-                <li className="m-2">Graphic design</li>
-                <li className="m-2">Social and Video</li>
-                <li className="m-2">Art Direction</li>
-              </ul>
+            <div className="absolute w-32 top-8 -left-5 border border-gray-200 text-sm text-center bg-white">
+              <TabList setContent={setContent} />
             </div>
           )}
         </button>
