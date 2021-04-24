@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="flex justify-center">
       <a href="https://uk.linkedin.com/in/joanne-mcgarvie" className="m-2 h-8">
         <img
-          className="m-2 h-8"
+          className="h-8"
           alt="linkedin logo"
           src={linkedin}
           href="https://uk.linkedin.com/in/joanne-mcgarvie"

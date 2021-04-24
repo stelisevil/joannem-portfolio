@@ -19,6 +19,7 @@ const query = `{
       }
       title
       description
+      id
     }
   }
   recentWork {
