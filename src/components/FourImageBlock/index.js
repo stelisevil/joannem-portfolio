@@ -9,8 +9,8 @@ const FourImageBlock = ({ block }) => (
         />
         <img
           className="w-full p-2"
-          src={block.images[0].url}
-          alt={block.images[0].alt}
+          src={block.images[1].url}
+          alt={block.images[1].alt}
         />
       </div>
       <div className="flex flex-col md:w-1/2 w-full">
@@ -21,8 +21,8 @@ const FourImageBlock = ({ block }) => (
         />
         <img
           className="w-full p-2"
-          src={block.images[2].url}
-          alt={block.images[2].alt}
+          src={block.images[3].url}
+          alt={block.images[3].alt}
         />
       </div>
     </div>

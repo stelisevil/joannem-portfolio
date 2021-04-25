@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HomePage from "./HomePage";
 import ArtDirection from "./ArtDirection";
+import Campaigns from "./Campaigns";
 import GraphicDesign from "./GraphicDesign";
 import SocialAndVideo from "./SocialAndVideo";
 import UxAndUi from "./UX";
@@ -36,6 +37,10 @@ const query = `{
       description
       id
     }
+  }
+  campaign {
+    pageTitle
+    pageDescription
   }
   graphicDesign {
     pageTitle
@@ -117,6 +122,7 @@ const MainContent = ({ content }) => {
   const {
     recentWork,
     artDirection,
+    campaign,
     graphicDesign,
     socialAndVideo,
     uxAndUi
@@ -128,6 +134,7 @@ const MainContent = ({ content }) => {
       {content === "art-direction" && (
         <ArtDirection artDirection={artDirection} />
       )}
+      {content === "campaigns" && <Campaigns campaign={campaign} />}
       {content === "graphic-design" && (
         <GraphicDesign graphicDesign={graphicDesign} />
       )}
