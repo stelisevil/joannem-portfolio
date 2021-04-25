@@ -3,6 +3,7 @@ import HomePage from "./HomePage";
 import ArtDirection from "./ArtDirection";
 import GraphicDesign from "./GraphicDesign";
 import SocialAndVideo from "./SocialAndVideo";
+import UxAndUi from "./UX";
 import getDato from "../services/getDato";
 
 const query = `{
@@ -84,6 +85,19 @@ const query = `{
       id
     }
   }
+  uxAndUi {
+    pageTitle
+    pageDescription
+    largeImageBlocks {
+      largeImage {
+        url(imgixParams: {w: "1200", fit: crop})
+        alt
+      }
+      title
+      description
+      id
+    }
+  }
 }`;
 
 const MainContent = ({ content }) => {
@@ -104,7 +118,8 @@ const MainContent = ({ content }) => {
     recentWork,
     artDirection,
     graphicDesign,
-    socialAndVideo
+    socialAndVideo,
+    uxAndUi
   } = datoResponse;
 
   return (
@@ -119,6 +134,7 @@ const MainContent = ({ content }) => {
       {content === "social-and-video" && (
         <SocialAndVideo socialAndVideo={socialAndVideo} />
       )}
+      {content === "ux-and-ui" && <UxAndUi uxAndUi={uxAndUi} />}
     </div>
   );
 };
