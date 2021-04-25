@@ -5,10 +5,7 @@ const Carousel = ({ carousel }) => {
   const numberOfCarouselImages = carousel.carouselImages.length;
 
   return (
-    <div
-      className="flex flex-col justify-center items-center w-full mb-8"
-      key={carousel.id}
-    >
+    <div className="flex flex-col justify-center items-center w-full mb-8">
       <div className="flex relative md:w-3/4 w-full mb-6">
         <div
           className="absolute left-0 h-full w-16 text-2xl flex cursor-pointer items-center justify-center"

@@ -6,10 +6,10 @@ const ArtDirection = ({ artDirection }) => (
     <div className="text-4xl font-bold mb-2">{artDirection.pageTitle}</div>
     <div className="mb-6">{artDirection.pageDescription}</div>
     {artDirection.mainSquareMontage.map(montage => (
-      <SquareMontage montage={montage} />
+      <SquareMontage montage={montage} id={montage.id} />
     ))}
     {artDirection.fashionArtDirectionCarousel.map(carousel => (
-      <Carousel carousel={carousel} />
+      <Carousel carousel={carousel} id={carousel.id} />
     ))}
   </>
 );

@@ -1,4 +1,4 @@
-const SquareMontage = ({ montage }) => (
+const SocialMontage = ({ montage }) => (
   <div className="flex flex-col justify-center items-center w-full mb-8">
     <div className="flex flex-col md:flex-row md:w-3/4 w-full justify-center items-center mb-6">
       <div className="flex flex-col md:w-1/2 w-full">
@@ -20,7 +20,7 @@ const SquareMontage = ({ montage }) => (
           />
         </div>
       </div>
-      <div className="flex flex-col md:w-1/2 w-full">
+      <div className="flex md:flex-col-reverse md:w-1/2 w-full">
         <img
           className="w-full p-2"
           src={montage.largeImageRight.url}
@@ -47,4 +47,4 @@ const SquareMontage = ({ montage }) => (
   </div>
 );
 
-export default SquareMontage;
+export default SocialMontage;
