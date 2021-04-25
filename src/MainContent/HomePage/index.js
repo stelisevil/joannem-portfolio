@@ -17,17 +17,17 @@ const HomePage = ({ recentWork }) => (
       <p className="font-bold mb-4 text-xl">Recent work...</p>
       <div className="flex md:flex-row flex-col">
         <img
-          src={recentWork?.leftImage?.responsiveImage?.src}
+          src={recentWork.leftImage.url}
           alt="recent work images"
           className="h-auto md:w-1/3 w-full"
         />
         <img
-          src={recentWork?.centralImage?.responsiveImage?.src}
+          src={recentWork.centralImage.url}
           alt="recent work images"
           className="h-auto md:w-1/3 w-full md:px-2"
         />
         <img
-          src={recentWork?.rightImage?.responsiveImage?.src}
+          src={recentWork.rightImage.url}
           alt="recent work images"
           className="h-auto md:w-1/3 w-full"
         />

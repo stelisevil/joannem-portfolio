@@ -9,7 +9,7 @@ const Header = ({ setContent }) => {
   const [burgerMenuOpen, setBurgerMenu] = useState(false);
 
   return (
-    <div className="flex w-full justify-between pt-12 pb-4 px-2 sticky top-0 bg-white">
+    <div className="flex w-full justify-between pt-12 pb-4 px-2 sticky top-0 bg-white z-50">
       <div>JOANNE MCGARVIE</div>
       <div className="md:hidden flex cursor-pointer">
         <button

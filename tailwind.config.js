@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        "400": "100rem"
+      },
       fontFamily: {
         sans: ["brown", ...defaultTheme.fontFamily.sans],
         bold: ["brownBold"]

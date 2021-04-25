@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HomePage from "./HomePage";
 import ArtDirection from "./ArtDirection";
+import GraphicDesign from "./GraphicDesign";
 import getDato from "../services/getDato";
 
 const query = `{
@@ -9,13 +10,38 @@ const query = `{
     pageDescription
     mainSquareMontage {
       largeImageLeft {
-        url
+        url(imgixParams: {w: "600", fit: crop})
+        alt
       }
       largeImageRight {
-        url
+        url(imgixParams: {w: "600", fit: crop})
+        alt
       }
       smallImages {
-        url
+        url(imgixParams: {w: "300", fit: crop})
+        alt
+      }
+      title
+      description
+      id
+    }
+    fashionArtDirectionCarousel {
+      carouselImages {
+        url(imgixParams: {w: "1200", fit: crop})
+        alt
+      }
+      title
+      description
+      id
+    }
+  }
+  graphicDesign {
+    pageTitle
+    pageDescription
+    mainImageBlock {
+      images {
+        url(imgixParams: {w: "1200", fit: crop})
+        alt
       }
       title
       description
@@ -24,23 +50,19 @@ const query = `{
   }
   recentWork {
     leftImage {
-      responsiveImage {
-        src
-      }
+      url(imgixParams: {w: "1200", fit: crop})
+      alt
     }
     rightImage {
-      responsiveImage {
-        src
-      }
+      url(imgixParams: {w: "1200", fit: crop})
+      alt
     }
     centralImage {
-      responsiveImage {
-        src
-      }
+      url(imgixParams: {w: "1200", fit: crop})
+      alt
     }
   }
-}
-`;
+}`;
 
 const MainContent = ({ content }) => {
   const [loading, setLoading] = useState(true);
@@ -48,6 +70,7 @@ const MainContent = ({ content }) => {
 
   useEffect(() => {
     getDato(query).then(res => {
+      console.log(res);
       setDatoResponse(res);
       setLoading(false);
     });
@@ -55,13 +78,16 @@ const MainContent = ({ content }) => {
 
   if (loading) return null;
 
-  const { recentWork, artDirection } = datoResponse;
+  const { recentWork, artDirection, graphicDesign } = datoResponse;
 
   return (
     <div className="w-full flex flex-col p-2">
       {content === "home" && <HomePage recentWork={recentWork} />}
       {content === "art-direction" && (
         <ArtDirection artDirection={artDirection} />
+      )}
+      {content === "graphic-design" && (
+        <GraphicDesign graphicDesign={graphicDesign} />
       )}
     </div>
   );
