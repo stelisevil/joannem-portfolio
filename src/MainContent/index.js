@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import HomePage from "./HomePage";
 import ArtDirection from "./ArtDirection";
 import GraphicDesign from "./GraphicDesign";
+import SocialAndVideo from "./SocialAndVideo";
 import getDato from "../services/getDato";
 
 const query = `{
@@ -62,6 +63,27 @@ const query = `{
       alt
     }
   }
+  socialAndVideo {
+    pageTitle
+    pageDescription
+    mainSocialMontage {
+      largeImageLeft {
+        url(imgixParams: {w: "400", h: "800", fit: crop})
+        alt
+      }
+      largeImageRight {
+        url(imgixParams: {w: "400", h: "800", fit: crop})
+        alt
+      }
+      smallImages {
+        url(imgixParams: {w: "400", h: "800", fit: crop})
+        alt
+      }
+      title
+      description
+      id
+    }
+  }
 }`;
 
 const MainContent = ({ content }) => {
@@ -78,7 +100,12 @@ const MainContent = ({ content }) => {
 
   if (loading) return null;
 
-  const { recentWork, artDirection, graphicDesign } = datoResponse;
+  const {
+    recentWork,
+    artDirection,
+    graphicDesign,
+    socialAndVideo
+  } = datoResponse;
 
   return (
     <div className="w-full flex flex-col p-2">
@@ -88,6 +115,9 @@ const MainContent = ({ content }) => {
       )}
       {content === "graphic-design" && (
         <GraphicDesign graphicDesign={graphicDesign} />
+      )}
+      {content === "social-and-video" && (
+        <SocialAndVideo socialAndVideo={socialAndVideo} />
       )}
     </div>
   );
