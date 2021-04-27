@@ -47,7 +47,24 @@ const query = `{
     pageDescription
     mainImageBlock {
       images {
-        url(imgixParams: {w: "1200", fit: crop})
+        url(imgixParams: {w: "600", h: "400", fit: crop})
+        alt
+      }
+      title
+      description
+      id
+    }
+    squareMontage {
+      largeImageLeft {
+        url(imgixParams: {w: "600", fit: crop})
+        alt
+      }
+      largeImageRight {
+        url(imgixParams: {w: "600", fit: crop})
+        alt
+      }
+      smallImages {
+        url(imgixParams: {w: "300", fit: crop})
         alt
       }
       title
@@ -74,16 +91,19 @@ const query = `{
     pageDescription
     mainSocialMontage {
       largeImageLeft {
-        url(imgixParams: {w: "400", h: "800", fit: crop})
+        url(imgixParams: {w: "490", h: "800", fit: crop})
         alt
+        mimeType
       }
       largeImageRight {
-        url(imgixParams: {w: "400", h: "800", fit: crop})
+        url(imgixParams: {w: "490", h: "800", fit: crop})
         alt
+        mimeType
       }
       smallImages {
-        url(imgixParams: {w: "400", h: "800", fit: crop})
+        url(imgixParams: {w: "490", h: "800", fit: crop})
         alt
+        mimeType
       }
       title
       description
