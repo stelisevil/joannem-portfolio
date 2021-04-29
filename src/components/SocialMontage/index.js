@@ -1,42 +1,42 @@
+const getFormat = mimeType => mimeType.split("/")[0];
+
+const displayContent = (content, size) => {
+  if (getFormat(content.mimeType) === "image") {
+    return (
+      <img
+        className={`w-${size === "large" ? "full" : "1/2"} p-2`}
+        src={content.url}
+        alt={content.alt}
+      />
+    );
+  }
+  return (
+    <video
+      className={`w-${size === "large" ? "full" : "1/2"} p-2`}
+      src={content.url}
+      type={content.mimeType}
+      muted
+      autoplay
+      controls
+    />
+  );
+};
+
 const SocialMontage = ({ montage }) => (
   <div className="flex flex-col justify-center items-center w-full mb-8">
     <div className="flex flex-col md:flex-row md:w-3/4 w-full justify-center items-center mb-6">
       <div className="flex flex-col md:w-1/2 w-full">
-        <img
-          className="w-full p-2"
-          src={montage.largeImageLeft.url}
-          alt={montage.largeImageLeft.alt}
-        />
+        {displayContent(montage.largeImageLeft, "large")}
         <div className="flex w-full">
-          <img
-            className="p-2 w-1/2"
-            src={montage.smallImages[0].url}
-            alt={montage.smallImages[0].alt}
-          />
-          <img
-            className="p-2 w-1/2"
-            src={montage.smallImages[1].url}
-            alt={montage.smallImages[1].alt}
-          />
+          {displayContent(montage.smallImages[0])}
+          {displayContent(montage.smallImages[1])}
         </div>
       </div>
       <div className="flex md:flex-col-reverse md:w-1/2 w-full">
-        <img
-          className="w-full p-2"
-          src={montage.largeImageRight.url}
-          alt={montage.largeImageRight.alt}
-        />
+        {displayContent(montage.largeImageRight, "large")}
         <div className="flex w-full">
-          <img
-            className="p-2 w-1/2"
-            src={montage.smallImages[2].url}
-            alt={montage.smallImages[2].alt}
-          />
-          <img
-            className="p-2 w-1/2"
-            src={montage.smallImages[3].url}
-            alt={montage.smallImages[3].alt}
-          />
+          {displayContent(montage.smallImages[2])}
+          {displayContent(montage.smallImages[3])}
         </div>
       </div>
     </div>
