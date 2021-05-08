@@ -30,7 +30,7 @@ const query = `{
     }
     fashionArtDirectionCarousel {
       carouselImages {
-        url(imgixParams: {w: "1200", fit: crop})
+        url(imgixParams: {w: "1200", h: "800", fit: crop})
         alt
       }
       title

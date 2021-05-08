@@ -4,7 +4,7 @@ const displayContent = (content, size) => {
   if (getFormat(content.mimeType) === "image") {
     return (
       <img
-        className={`w-${size === "large" ? "full" : "1/2"} p-2`}
+        className={`w-${size === "large" ? "full" : "1/2"} p-2 h-full`}
         src={content.url}
         alt={content.alt}
       />
@@ -12,7 +12,7 @@ const displayContent = (content, size) => {
   }
   return (
     <video
-      className={`w-${size === "large" ? "full" : "1/2"} p-2`}
+      className={`w-${size === "large" ? "full" : "1/2"} p-2 h-full`}
       src={content.url}
       type={content.mimeType}
       muted
