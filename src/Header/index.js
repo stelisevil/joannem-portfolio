@@ -21,7 +21,14 @@ const Header = ({ setContent }) => {
         </button>
         {burgerMenuOpen && (
           <div className="flex flex-col text-center items-center border boder-red-400 absolute w-full left-0 top-20 bg-white">
-            <div className="my-5">HOME</div>
+            <div
+              className="my-5"
+              onClick={() => {
+                setContent("home");
+              }}
+            >
+              HOME
+            </div>
             <button
               className="flex items-center my-5 cursor-pointer relative"
               onClick={() => {
