@@ -1,5 +1,5 @@
 const FourImageBlock = ({ block }) => (
-  <div className="flex flex-col justify-center items-center w-full mb-8">
+  <div className="flex flex-col justify-center items-center w-full mb-12">
     <div className="flex flex-col md:flex-row md:w-3/4 w-full justify-center items-center mb-6">
       <div className="flex flex-col md:w-1/2 w-full">
         <img

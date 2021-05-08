@@ -1,5 +1,5 @@
 const LargeImageBlock = ({ block }) => (
-  <div className="flex flex-col justify-center items-center w-full mb-8">
+  <div className="flex flex-col justify-center items-center w-full mb-12">
     <div className="md:w-3/4 w-full mb-6">
       <img
         className="w-full p-2"

@@ -1,7 +1,7 @@
 const TabList = ({ setContent }) => (
   <ul className="cursor-default">
     <li
-      className="m-2 cursor-pointer"
+      className="m-4 cursor-pointer mt-0 md:mt-4"
       onClick={() => {
         setContent("ux-and-ui");
       }}
@@ -9,7 +9,7 @@ const TabList = ({ setContent }) => (
       UX and UI
     </li>
     <li
-      className="m-2 cursor-pointer"
+      className="m-4 cursor-pointer"
       onClick={() => {
         setContent("campaigns");
       }}
@@ -17,15 +17,15 @@ const TabList = ({ setContent }) => (
       Campaigns
     </li>
     <li
-      className="m-2 cursor-pointer"
+      className="m-4 cursor-pointer"
       onClick={() => {
         setContent("graphic-design");
       }}
     >
-      Graphic design
+      Graphic Design
     </li>
     <li
-      className="m-2 cursor-pointer"
+      className="m-4 cursor-pointer"
       onClick={() => {
         setContent("social-and-video");
       }}
@@ -33,7 +33,7 @@ const TabList = ({ setContent }) => (
       Social and Video
     </li>
     <li
-      className="m-2 cursor-pointer"
+      className="m-4 cursor-pointer"
       onClick={() => {
         setContent("art-direction");
       }}

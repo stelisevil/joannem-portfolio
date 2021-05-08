@@ -131,7 +131,6 @@ const MainContent = ({ content }) => {
 
   useEffect(() => {
     getDato(query).then(res => {
-      console.log(res);
       setDatoResponse(res);
       setLoading(false);
     });
@@ -149,7 +148,7 @@ const MainContent = ({ content }) => {
   } = datoResponse;
 
   return (
-    <div className="w-full flex flex-col p-2">
+    <div className="w-full flex flex-col p-2 mt-7">
       {content === "home" && <HomePage recentWork={recentWork} />}
       {content === "art-direction" && (
         <ArtDirection artDirection={artDirection} />

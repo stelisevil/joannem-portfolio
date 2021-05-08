@@ -1,14 +1,16 @@
 import { useState } from "react";
+import nextBtn from "../../assets/NextBtn.png";
+import prevBtn from "../../assets/PrevBtn.png";
 
 const Carousel = ({ carousel }) => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const numberOfCarouselImages = carousel.carouselImages.length;
 
   return (
-    <div className="flex flex-col justify-center items-center w-full mb-8">
+    <div className="flex flex-col justify-center items-center w-full mb-12">
       <div className="flex relative md:w-3/4 w-full mb-6">
         <div
-          className="absolute left-0 h-full w-16 text-2xl flex cursor-pointer items-center justify-center"
+          className="absolute left-2 h-full w-8 md:w-12 text-2xl flex cursor-pointer items-center justify-center bg-white bg-opacity-0 hover:bg-opacity-50 transition-all"
           onClick={() => {
             setCarouselIndex(prevState => {
               if (prevState === 0) return numberOfCarouselImages - 1;
@@ -16,7 +18,7 @@ const Carousel = ({ carousel }) => {
             });
           }}
         >
-          &lt;
+          <img src={prevBtn} width="18" height="22" alt="previous" />
         </div>
         <img
           className="w-full p-2"
@@ -24,7 +26,7 @@ const Carousel = ({ carousel }) => {
           alt={carousel.carouselImages[carouselIndex].alt}
         />
         <div
-          className="absolute right-0 h-full w-16 text-2xl flex cursor-pointer items-center justify-center"
+          className="absolute right-2 h-full w-8 md:w-12 text-2xl flex cursor-pointer items-center justify-center bg-white bg-opacity-0 hover:bg-opacity-50 transition-all"
           onClick={() => {
             setCarouselIndex(prevState => {
               if (prevState === numberOfCarouselImages - 1) return 0;
@@ -32,7 +34,7 @@ const Carousel = ({ carousel }) => {
             });
           }}
         >
-          &gt;
+          <img src={nextBtn} width="18" height="22" alt="next" />
         </div>
       </div>
       <div className="text-3xl font-bold mb-2">{carousel.title}</div>

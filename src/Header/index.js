@@ -36,8 +36,14 @@ const Header = ({ setContent }) => {
               />
             </button>
             {myWorkMenuOpen && (
-              <div className="w-32 top-8 -left-5 text-sm text-center">
-                <TabList setContent={setContent} />
+              <div className="w-36 top-8 -left-5 text-sm text-center transition-all">
+                <TabList
+                  setContent={content => {
+                    setContent(content);
+                    setMyWorkMenu(false);
+                    setBurgerMenu(false);
+                  }}
+                />
               </div>
             )}
             <a href={cv} className="my-5" target="_blank" rel="noreferrer">
@@ -54,7 +60,7 @@ const Header = ({ setContent }) => {
       </div>
       <div className="md:flex hidden">
         <div
-          className="mx-3 cursor-pointer"
+          className="mx-5 cursor-pointer"
           onClick={() => {
             setContent("home");
           }}
@@ -62,7 +68,7 @@ const Header = ({ setContent }) => {
           HOME
         </div>
         <button
-          className="flex items-center mx-3 cursor-pointer relative"
+          className="flex items-center mx-5 cursor-pointer relative"
           onClick={() => {
             setMyWorkMenu(!myWorkMenuOpen);
           }}
@@ -74,15 +80,26 @@ const Header = ({ setContent }) => {
             alt="open work dropdown menu"
           />
           {myWorkMenuOpen && (
-            <div className="absolute w-32 top-8 -left-5 border border-gray-200 text-sm text-center bg-white">
-              <TabList setContent={setContent} />
+            <div className="absolute w-36 top-8 -left-4 border border-gray-200 text-sm text-left bg-white">
+              <TabList
+                setContent={content => {
+                  setContent(content);
+                  setMyWorkMenu(false);
+                  setBurgerMenu(false);
+                }}
+              />
             </div>
           )}
         </button>
-        <a href={cv} className="mx-3" target="_blank" rel="noreferrer">
+        <a href={cv} className="mx-5" target="_blank" rel="noreferrer">
           CV
         </a>
-        <a href="https://uk.linkedin.com/in/joanne-mcgarvie" className="ml-3">
+        <a
+          href="https://uk.linkedin.com/in/joanne-mcgarvie"
+          className="ml-3"
+          target="_blank"
+          rel="noreferrer"
+        >
           LINKEDIN
         </a>
       </div>
