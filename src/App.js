@@ -7,7 +7,7 @@ const App = () => {
   const [content, setContent] = useState("home");
 
   return (
-    <div style={{ maxWidth: "1600px", margin: "auto" }}>
+    <div style={{ maxWidth: "1600px", margin: "auto", color: "rgb(43,43,43)" }}>
       <Header setContent={setContent} />
       <MainContent content={content} setContent={setContent} />
       <Footer />

@@ -15,11 +15,11 @@ const HomePage = ({ recentWork, setContent }) => (
     </div>
     <div className="mb-12">
       <p className="font-bold mb-4 text-xl">Recent work...</p>
-      <div className="flex md:flex-row flex-col w-full -m-2">
+      <div className="flex md:flex-row flex-col w-full md:-m-2">
         <img
           src={recentWork.leftImage.url}
           alt="recent work images"
-          className="h-full md:w-1/3 w-full mx-1 p-1 cursor-pointer"
+          className="h-full md:w-1/3 w-full md:mx-1 md:p-1 cursor-pointer"
           onClick={() => {
             setContent("ux-and-ui");
           }}
@@ -27,7 +27,7 @@ const HomePage = ({ recentWork, setContent }) => (
         <img
           src={recentWork.centralImage.url}
           alt="recent work images"
-          className="h-full md:w-1/3 w-full p-1 cursor-pointer"
+          className="h-full md:w-1/3 w-full py-2 md:p-1 cursor-pointer"
           onClick={() => {
             setContent("graphic-design");
           }}
@@ -35,7 +35,7 @@ const HomePage = ({ recentWork, setContent }) => (
         <img
           src={recentWork.rightImage.url}
           alt="recent work images"
-          className="h-full md:w-1/3 w-full mx-1 p-1 cursor-pointer"
+          className="h-full md:w-1/3 w-full md:mx-1 md:p-1 cursor-pointer"
           onClick={() => {
             setContent("ux-and-ui");
           }}
