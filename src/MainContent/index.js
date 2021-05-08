@@ -56,15 +56,15 @@ const query = `{
     }
     squareMontage {
       largeImageLeft {
-        url(imgixParams: {w: "600", fit: crop})
+        url(imgixParams: {w: "600", h: "600", fit: crop})
         alt
       }
       largeImageRight {
-        url(imgixParams: {w: "600", fit: crop})
+        url(imgixParams: {w: "600", h: "600", fit: crop})
         alt
       }
       smallImages {
-        url(imgixParams: {w: "300", fit: crop})
+        url(imgixParams: {w: "300", h: "300", fit: crop})
         alt
       }
       title
@@ -101,7 +101,7 @@ const query = `{
         mimeType
       }
       smallImages {
-        url(imgixParams: {w: "490", h: "800", fit: crop})
+        url(imgixParams: {w: "245", h: "400", fit: crop})
         alt
         mimeType
       }

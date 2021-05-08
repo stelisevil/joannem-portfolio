@@ -37,7 +37,9 @@ const Carousel = ({ carousel }) => {
           <img src={nextBtn} width="18" height="22" alt="next" />
         </div>
       </div>
-      <div className="text-3xl font-bold mb-2">{carousel.title}</div>
+      <div className="text-3xl font-bold mb-2 text-center">
+        {carousel.title}
+      </div>
       <div className="mb-6 md:w-1/2 w-full text-center">
         {carousel.description}
       </div>
