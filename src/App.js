@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div style={{ maxWidth: "1600px", margin: "auto" }}>
       <Header setContent={setContent} />
-      <MainContent content={content} />
+      <MainContent content={content} setContent={setContent} />
       <Footer />
     </div>
   );

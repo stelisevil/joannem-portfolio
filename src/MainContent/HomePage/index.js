@@ -1,4 +1,4 @@
-const HomePage = ({ recentWork }) => (
+const HomePage = ({ recentWork, setContent }) => (
   <>
     <div className="text-left w-full lg:w-2/3 mb-12">
       <div className="mb-2 text-4xl font-bold">Hi, I’m Joanne.</div>
@@ -19,17 +19,26 @@ const HomePage = ({ recentWork }) => (
         <img
           src={recentWork.leftImage.url}
           alt="recent work images"
-          className="h-auto md:w-1/3 w-full"
+          className="h-auto md:w-1/3 w-full cursor-pointer"
+          onClick={() => {
+            setContent("ux-and-ui");
+          }}
         />
         <img
           src={recentWork.centralImage.url}
           alt="recent work images"
-          className="h-auto md:w-1/3 w-full md:px-2 py-2 md:py-0"
+          className="h-auto md:w-1/3 w-full md:px-2 py-2 md:py-0 cursor-pointer"
+          onClick={() => {
+            setContent("graphic-design");
+          }}
         />
         <img
           src={recentWork.rightImage.url}
           alt="recent work images"
-          className="h-auto md:w-1/3 w-full"
+          className="h-auto md:w-1/3 w-full cursor-pointer"
+          onClick={() => {
+            setContent("ux-and-ui");
+          }}
         />
       </div>
     </div>

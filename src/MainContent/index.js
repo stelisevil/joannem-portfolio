@@ -125,7 +125,7 @@ const query = `{
   }
 }`;
 
-const MainContent = ({ content }) => {
+const MainContent = ({ content, setContent }) => {
   const [loading, setLoading] = useState(true);
   const [datoResponse, setDatoResponse] = useState({});
 
@@ -149,7 +149,9 @@ const MainContent = ({ content }) => {
 
   return (
     <div className="w-full flex flex-col p-2 mt-7">
-      {content === "home" && <HomePage recentWork={recentWork} />}
+      {content === "home" && (
+        <HomePage recentWork={recentWork} setContent={setContent} />
+      )}
       {content === "art-direction" && (
         <ArtDirection artDirection={artDirection} />
       )}
