@@ -21,7 +21,7 @@ const Carousel = ({ carousel }) => {
           <img src={prevBtn} width="18" height="22" alt="previous" />
         </div>
         <img
-          className="w-full p-2"
+          className="w-full p-2 h-auto"
           src={carousel.carouselImages[carouselIndex].url}
           alt={carousel.carouselImages[carouselIndex].alt}
         />

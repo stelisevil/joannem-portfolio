@@ -13,15 +13,15 @@ const query = `{
     pageDescription
     mainSquareMontage {
       largeImageLeft {
-        url(imgixParams: {w: "600", fit: crop})
+        url(imgixParams: {w: "600", h: "600", fit: crop})
         alt
       }
       largeImageRight {
-        url(imgixParams: {w: "600", fit: crop})
+        url(imgixParams: {w: "600", h: "600", fit: crop})
         alt
       }
       smallImages {
-        url(imgixParams: {w: "300", fit: crop})
+        url(imgixParams: {w: "300", h: "300", fit: crop})
         alt
       }
       title
@@ -74,15 +74,15 @@ const query = `{
   }
   recentWork {
     leftImage {
-      url(imgixParams: {w: "1200", fit: crop})
+      url(imgixParams: {w: "800", h: "800", fit: crop})
       alt
     }
     rightImage {
-      url(imgixParams: {w: "1200", fit: crop})
+      url(imgixParams: {w: "800", h: "800", fit: crop})
       alt
     }
     centralImage {
-      url(imgixParams: {w: "1200", fit: crop})
+      url(imgixParams: {w: "800", h: "800", fit: crop})
       alt
     }
   }
