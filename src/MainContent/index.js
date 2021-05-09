@@ -41,6 +41,26 @@ const query = `{
   campaign {
     pageTitle
     pageDescription
+    campaignMontage {
+      largeImageLeft {
+        url(imgixParams: {w: "490", h: "800", fit: crop})
+        alt
+        mimeType
+      }
+      largeImageRight {
+        url(imgixParams: {w: "490", h: "800", fit: crop})
+        alt
+        mimeType
+      }
+      smallImages {
+        url(imgixParams: {w: "245", h: "400", fit: crop})
+        alt
+        mimeType
+      }
+      title
+      description
+      id
+    }
   }
   graphicDesign {
     pageTitle
@@ -94,16 +114,28 @@ const query = `{
         url(imgixParams: {w: "490", h: "800", fit: crop})
         alt
         mimeType
+        video {
+          mp4Url
+          thumbnailUrl
+        }
       }
       largeImageRight {
         url(imgixParams: {w: "490", h: "800", fit: crop})
         alt
         mimeType
+        video {
+          mp4Url
+          thumbnailUrl
+        }
       }
       smallImages {
         url(imgixParams: {w: "245", h: "400", fit: crop})
         alt
         mimeType
+        video {
+          mp4Url
+          thumbnailUrl
+        }
       }
       title
       description

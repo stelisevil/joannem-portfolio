@@ -1,7 +1,6 @@
 const getFormat = mimeType => mimeType.split("/")[0];
 
 const displayContent = (content, size) => {
-  console.log(content.mimeType);
   if (getFormat(content.mimeType) === "image") {
     return (
       <img
@@ -14,8 +13,9 @@ const displayContent = (content, size) => {
   return (
     <video
       className={`w-${size === "large" ? "full" : "1/2"} p-2 h-full`}
-      src={content.url}
+      src={content.video.mp4Url}
       type={content.mimeType}
+      poster={content.video.thumbnailUrl}
       autoPlay
       muted
       loop

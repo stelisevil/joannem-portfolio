@@ -25,6 +25,7 @@ const Header = ({ setContent }) => {
               className="my-5"
               onClick={() => {
                 setContent("home");
+                setBurgerMenu(false);
               }}
             >
               HOME
