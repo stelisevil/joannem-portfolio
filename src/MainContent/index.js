@@ -151,7 +151,7 @@ const query = `{
         alt
       }
       title
-      description
+      description(markdown: true)
       id
     }
   }

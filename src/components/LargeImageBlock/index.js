@@ -8,7 +8,10 @@ const LargeImageBlock = ({ block }) => (
       />
     </div>
     <div className="text-3xl font-bold mb-2 text-center">{block.title}</div>
-    <div className="mb-6 md:w-1/2 w-full text-center">{block.description}</div>
+    <div
+      className="mb-6 md:w-1/2 w-full text-center"
+      dangerouslySetInnerHTML={{ __html: block.description }}
+    ></div>
   </div>
 );
 
