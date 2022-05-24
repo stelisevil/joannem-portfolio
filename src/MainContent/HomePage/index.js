@@ -3,7 +3,7 @@ const HomePage = ({ recentWork, setContent }) => (
     <div className="text-left w-full lg:w-2/3 mb-12">
       <div className="mb-2 text-4xl font-bold">Hi, I’m Joanne.</div>
       <div className="mb-7 text-4xl font-bold">
-        I’m a digital designer who loves to create new ideas.
+        I’m a UX designer who loves to create new ideas.
       </div>
       <div className="my-2">
         With over ten years’ professional experience, my skills span pretty much
