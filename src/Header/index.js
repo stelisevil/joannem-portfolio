@@ -21,7 +21,7 @@ const Header = ({ setContent }) => {
         </button>
         {burgerMenuOpen && (
           <div className="flex flex-col text-center items-center border boder-red-400 absolute w-full left-0 top-20 bg-white">
-            <div
+            <button
               className="my-5"
               onClick={() => {
                 setContent("home");
@@ -29,7 +29,7 @@ const Header = ({ setContent }) => {
               }}
             >
               HOME
-            </div>
+            </button>
             <button
               className="flex items-center my-5 cursor-pointer relative"
               onClick={() => {
@@ -46,7 +46,7 @@ const Header = ({ setContent }) => {
             {myWorkMenuOpen && (
               <div className="w-36 top-8 -left-5 text-sm text-center transition-all">
                 <TabList
-                  setContent={content => {
+                  setContent={(content) => {
                     setContent(content);
                     setMyWorkMenu(false);
                     setBurgerMenu(false);
@@ -67,14 +67,14 @@ const Header = ({ setContent }) => {
         )}
       </div>
       <div className="md:flex hidden">
-        <div
+        <button
           className="mx-5 cursor-pointer"
           onClick={() => {
             setContent("home");
           }}
         >
           HOME
-        </div>
+        </button>
         <button
           className="flex items-center mx-5 cursor-pointer relative"
           onClick={() => {
@@ -90,7 +90,7 @@ const Header = ({ setContent }) => {
           {myWorkMenuOpen && (
             <div className="absolute w-36 top-8 -left-4 border border-gray-200 text-sm text-left bg-white">
               <TabList
-                setContent={content => {
+                setContent={(content) => {
                   setContent(content);
                   setMyWorkMenu(false);
                   setBurgerMenu(false);
