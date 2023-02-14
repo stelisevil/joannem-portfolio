@@ -1,4 +1,4 @@
-const getFormat = mimeType => mimeType.split("/")[0];
+const getFormat = (mimeType) => mimeType.split("/")[0];
 
 const displayContent = (content, size) => {
   if (getFormat(content.mimeType) === "image") {

@@ -149,6 +149,11 @@ const query = `{
       largeImage {
         url(imgixParams: {w: "1200", fit: crop})
         alt
+        mimeType
+        video {
+          mp4Url
+          thumbnailUrl
+        }
       }
       title
       description(markdown: true)
@@ -162,7 +167,7 @@ const MainContent = ({ content, setContent }) => {
   const [datoResponse, setDatoResponse] = useState({});
 
   useEffect(() => {
-    getDato(query).then(res => {
+    getDato(query).then((res) => {
       setDatoResponse(res);
       setLoading(false);
     });
@@ -176,7 +181,7 @@ const MainContent = ({ content, setContent }) => {
     campaign,
     graphicDesign,
     socialAndVideo,
-    uxAndUi
+    uxAndUi,
   } = datoResponse;
 
   return (
